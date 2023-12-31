@@ -1,0 +1,51 @@
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            // Obteniendo las dimensiones de la consola
+            int consoleWidth = Console.WindowWidth;
+            int consoleHeight = Console.WindowHeight;
+
+            // Calculando la posición para centrar el primer mensaje
+            int messageWidth = 23; // Ancho del primer mensaje
+            int leftPosition = (consoleWidth - messageWidth) / 2;
+            int topPosition = consoleHeight / 2;
+
+            // Estableciendo la posición del cursor y mostrando el primer mensaje
+            Console.SetCursorPosition(leftPosition, topPosition);
+            Console.WriteLine("FELIZ AÑO A TODOS!!!!!");
+            Thread.Sleep(1500);
+            Console.SetCursorPosition(leftPosition, topPosition+1);
+            Console.WriteLine("Despierten, EN ESTE 2024..");
+            Thread.Sleep(1500);
+            Console.SetCursorPosition(leftPosition, topPosition + 2);
+            Console.WriteLine("La Matrix los tiene...");
+            Thread.Sleep(1500);
+            Console.SetCursorPosition(leftPosition, topPosition + 3);
+            Console.WriteLine("Siguan al conejo blanco.");
+            Thread.Sleep(1500);
+            Console.SetCursorPosition(leftPosition, topPosition + 4);
+            Console.WriteLine("Toc, toc,A TODOS.");
+            Thread.Sleep(1500);
+
+            // Limpiando la consola y mostrando "ERROR DE SISTEMA" en el centro
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red; // Cambiando el color a rojo para el mensaje de error
+            int errorMessageWidth = 15; // Ancho del mensaje de error
+            int errorLeftPosition = (consoleWidth - errorMessageWidth) / 2;
+            int errorTopPosition = consoleHeight / 2;
+
+            Console.SetCursorPosition(errorLeftPosition, errorTopPosition);
+            Console.WriteLine("ERROR DE SISTEMA");
+            Thread.Sleep(1000); // Espera de 1 segundo
+
+            // Limpiando la consola y mostrando la matriz de ceros y unos
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green; // Cambiando de nuevo al color verde
+            for (int i = 0; i < consoleHeight; i++)
+            {
+                Console.WriteLine("010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101");
+                Thread.Sleep(50); // Añadiendo una pausa breve entre cada línea
+            }
+
+            Console.ResetColor(); // Esto restablece el color a su valor predeterminado
+            Console.ReadKey();
